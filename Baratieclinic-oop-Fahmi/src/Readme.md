@@ -1,34 +1,73 @@
-# <h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
-<p align="center">Agung Widiyanto</p>
-
-## Dasar Teori
-
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
-
-## Guided 
-
-### 1. [Nama Topik]
-
-```python
-print("ini adalah file code guided praktikan")
-```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function print untuk mengeksekusi nya.
-
-## Unguided 
-
-### 1. [Soal]
-
-```python
-print("ini adalah file code guided praktikan")
-```
-#### Output:
-![image](https://github.com/user-attachments/assets/fc05c081-b447-4e91-a2fc-24f481d8a593)
+# <h1 align="center">Baratie Clinic System</h1>
+<p align="center">Fahmi Hidayat (2311110063)</p>
 
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function print untuk mengeksekusi nya.
+## Overview
+The Baratie Clinic System adalah aplikasi berbasis Java sederhana yang dirancang untuk mengelola janji temu antara dokter dan pasien, pendaftaran pasien, serta pelacakan data medis. Sistem ini memungkinkan pengguna untuk:
 
-## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
-
-## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+* Mendaftarkan pasien baru.
+* Menjadwalkan janji temu antara dokter dan pasien.
+* Melihat daftar janji temu yang telah dijadwalkan.
+* Memastikan keamanan data melalui prinsip enkapsulasi dan validasi data.
+## Features
+### 1. Pendaftaran Pasien
+* Mendaftarkan pasien baru dengan ID unik, nama, dan usia.
+* Memastikan validasi data seperti nama tidak boleh kosong dan usia harus valid.
+### 2. Penjadwalan Janji Temu
+* Memungkinkan pengguna untuk menjadwalkan janji temu antara pasien yang terdaftar dan dokter yang tersedia.
+* Menyertakan tanggal janji temu secara otomatis (tanggal sekarang).
+### 3. Melihat Janji Temu
+* Menampilkan daftar semua janji temu yang telah dijadwalkan.
+* Menampilkan detail seperti nama dokter, spesialisasi, nama pasien, usia, dan tanggal janji temu.
+### 4. Validasi Data
+* Memastikan data pasien dan dokter valid sebelum disimpan.
+* Menggunakan kelas utilitas DataChecker untuk memvalidasi input.
+## Classes Description
+### 1. Doctor.java
+Kelas ini merepresentasikan seorang dokter di Baratie Clinic.
+#### Atribut:
+* doctorId: ID unik dokter.
+* name: Nama dokter.
+* specialization: Spesialisasi dokter.
+#### Method:
+* getDoctorId(): Mengembalikan ID dokter.
+* getName(): Mengembalikan nama dokter.
+* getSpecialization(): Mengembalikan spesialisasi dokter.
+* toString(): Menampilkan informasi dokter dalam format string.
+### 2. Patient.java
+Kelas ini merepresentasikan seorang pasien di Baratie Clinic.
+#### Atribut:
+* patientId: ID unik pasien.
+* name: Nama pasien.]
+* age: Usia pasien.
+#### Method:
+* getPatientId(): Mengembalikan ID pasien.
+* getName(): Mengembalikan nama pasien.
+* getAge(): Mengembalikan usia pasien.
+* toString(): Menampilkan informasi pasien dalam format string.
+### 3. Appointment.java
+Kelas ini merepresentasikan janji temu antara dokter dan pasien.
+#### Atribut:
+* appointmentId: ID unik janji temu.
+* doctor: Dokter yang menangani.
+* patient: Pasien yang dijadwalkan.
+* date: Tanggal janji temu.
+#### Method:
+* getAppointmentId(): Mengembalikan ID janji temu.
+* getDoctor(): Mengembalikan dokter yang menangani.
+* getPatient(): Mengembalikan pasien yang dijadwalkan.
+* getDate(): Mengembalikan tanggal janji temu.
+* toString(): Menampilkan detail janji temu dalam format string.
+### 4. DataChecker.java
+Kelas utilitas ini digunakan untuk memvalidasi data pasien dan dokter.
+#### Method:
+* isValidPatient(Patient patient): Memvalidasi data pasien (nama tidak boleh kosong dan usia harus valid).
+* isValidAppointmentDate(String date): Memvalidasi format tanggal janji temu.
+5. HospitalSystem.java
+Kelas utama yang menyediakan antarmuka sistem.
+#### Fungsi Utama:
+* Mendaftarkan pasien.
+* Menjadwalkan janji temu.
+* Menampilkan daftar janji temu.
+### Output
+![image](https://github.com/user-attachments/assets/ec82698e-40cb-4c43-b71e-480727497385)
